@@ -1,8 +1,4 @@
-v8.0.0
-
-베이스 모델:
-
-- [xBD-Building-Segmentation/xBD\_v8\_0_0.ipynb at main · sibas-lab/xBD-Building-Segmentation](https://github.com/sibas-lab/xBD-Building-Segmentation/blob/main/xBD_v8_0_0.ipynb "‌")
+# v8.0.0
 
 데이터 100프로 원본 훈련시
 
@@ -11,11 +7,11 @@ v8.0.0
 평균 교차 IoU: 69.38%
 ```
 
-![%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7\_2024-05-02\_03.36.34.png](https://trello.com/1/cards/663210cd2fbd660fd0a269dd/attachments/66329106a213cf1c96d82d06/download/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-05-02_03.36.34.png)
+![loss-accuracy.png](https://raw.githubusercontent.com/sibas-lab/xBD-Building-Segmentation/main/result/v8.0.0/loss-accuracy.png)
 
 ‌
 
-![%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7\_2024-05-02\_03.37.52.png](https://trello.com/1/cards/663210cd2fbd660fd0a269dd/attachments/66329225553f8d19ff3cde27/download/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-05-02_03.37.52.png)
+![val_loss.png](https://raw.githubusercontent.com/sibas-lab/xBD-Building-Segmentation/main/result/v8.0.0/val_loss.png)
 
 현재 그래프 상으로 과적합 현상 발생 없음
 특징: 베이스 모델 50% 훈련 데이터일 경우 과적합이 발생했으나 훈련 데이터 증가로 인해 과적합 현상이 해소됨
