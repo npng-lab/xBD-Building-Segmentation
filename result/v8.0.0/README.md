@@ -5,6 +5,7 @@
 ```
 정확도: 96.85%
 평균 교차 IoU: 69.38%
+F1 스코어: 0.5967
 ```
 
 ![loss-accuracy.png](https://raw.githubusercontent.com/sibas-lab/xBD-Building-Segmentation/main/result/v8.0.0/loss-accuracy.png)
