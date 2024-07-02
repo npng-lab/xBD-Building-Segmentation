@@ -1,8 +1,9 @@
 import os
 import zipfile
 import tarfile
-from PIL import Image
+from PIL import Image, ImageOps
 import numpy as np
+from tensorflow.keras.preprocessing.image import load_img
 
 
 def extract_zip(zip_file_path, extract_to_path):
@@ -41,3 +42,9 @@ def get_image_paths(input_dir, target_dir) -> tuple[list, list]:
                             if fname.endswith('pre_disaster_target.png')])
     
     return input_img_paths, target_img_paths
+
+def show(input_image_path, target_image_path):
+    input_img = Image.open(input_image_path)
+    target_img = ImageOps.autocontrast(load_img(target_image_path))
+    input_img.show()
+    target_img.show()
