@@ -30,8 +30,10 @@ input_img_paths, target_img_paths = get_image_paths(input_dir, target_dir)
 
 show(input_img_paths[7], target_img_paths[7])
 
-random.Random(1337).shuffle(input_img_paths)
-random.Random(1337).shuffle(target_img_paths)
+seed = 1337
+
+random.Random(seed).shuffle(input_img_paths)
+random.Random(seed).shuffle(target_img_paths)
 
 # KFold 설정
 num_folds = 28 # 예시 5
