@@ -17,3 +17,13 @@ def create_kfold_sets(num_folds, input_splits, target_splits):
         train_target_sets.append(train_target)
 
     return validation_sets, train_input_sets, train_target_sets
+
+
+def print_kfold_sets(num_folds: int, train_input_sets, train_target_sets, validation_sets):
+    for i in range(num_folds):
+        print(f"Fold {i+1}:")
+        print(f"Validation Set - Input: {len(validation_sets[i][0])}, Target: {len(validation_sets[i][1])}")
+        print(f"Train Set - Input: {len(train_input_sets[i])}, Target: {len(train_target_sets[i])}")
+        print(f"First Validation Input: {validation_sets[i][0][0]}")
+        print(f"First Validation Target: {validation_sets[i][1][0]}")
+        print()
