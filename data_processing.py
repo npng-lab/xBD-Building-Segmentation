@@ -3,7 +3,7 @@ import zipfile
 import tarfile
 from PIL import Image, ImageOps
 import numpy as np
-from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing.image import load_img, array_to_img
 
 
 def extract_zip(zip_file_path, extract_to_path):
@@ -48,3 +48,8 @@ def show(input_image_path, target_image_path):
     target_img = ImageOps.autocontrast(load_img(target_image_path))
     input_img.show()
     target_img.show()
+
+def show_predict(index ,predict_image_paths):
+    mask = predict_image_paths[index] > 0.5 # sigmoid 사용시
+    predict_img = ImageOps.autocontrast(array_to_img(mask))
+    predict_img.show()
