@@ -1,6 +1,7 @@
 import os
 import zipfile
 import tarfile
+import json
 from PIL import Image, ImageOps
 import numpy as np
 from tensorflow.keras.preprocessing.image import load_img, array_to_img
@@ -53,3 +54,8 @@ def show_predict(index ,predict_image_paths):
     mask = predict_image_paths[index] > 0.5 # sigmoid 사용시
     predict_img = ImageOps.autocontrast(array_to_img(mask))
     predict_img.show()
+
+def get_json(file) -> dict:
+    with open(file) as f:
+        data = json.load(f)
+    return data
